@@ -1,0 +1,114 @@
+\documentclass[12pt,a4paper,leqno,titlepage]{article}
+
+%\usepackage[square, numbers, comma, sort&compress]{natbib} %\citep{sth}
+
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+\usepackage{mathtools}
+\usepackage{physics2}
+\usephysicsmodule{ab}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{graphicx,subfigure,wrapfig}
+\usepackage{color}
+\usepackage{geometry}
+%\usepackage{setspace}
+%\doublespacing
+\usepackage{float}
+\usepackage{notoccite}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{setspace}
+\usepackage{zref-perpage}
+\zmakeperpage{footnote}
+\usepackage{hhline}
+\usepackage{lipsum}
+\usepackage{textcomp}
+\usepackage{breqn}
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
+bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
+colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},
+pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+\usepackage[nottoc]{tocbibind}
+
+\input{info}
+
+\usepackage[]{xepersian}
+\title{\titleeng} % Defines the thesis title - don't touch this
+
+\geometry{
+	a4paper,
+	total={186mm,255mm},
+	left=12mm,
+	top=20mm,
+}
+\settextfont{XB Niloofar}
+\setmathdigitfont{Yas}
+\linespread{1.75}
+
+%Theorems:
+\theoremstyle{plain}
+\newtheorem{thm}{قضیه‌ی}[section] %\begin{thm}
+\newtheorem{lem}[thm]{لم}
+\newtheorem{prop}[thm]{گزاره}
+\newtheorem*{cor}{نتیجه}
+\newtheorem{question}{پرسش}[section]
+\newtheorem{axiom}[thm]{اصل}
+\newtheorem{problem}{مساله}[section]
+\theoremstyle{definition}
+\newtheorem{deff}{تعریف}[section]
+\newtheorem{exa}{مثال}[section]
+\theoremstyle{remark}
+\newtheorem*{rem}{نکته}
+%\begin{proof}[اثبات:]       before end : \qedhere
+
+\newcommand{\IR}{\ensuremath{\mathbb{R}}} 
+\newcommand{\IC}{\ensuremath{\mathbb{C}}} 
+
+\graphicspath{{Figures/}}
+
+\doublehyphendemerits=10000       % No consecutive line hyphens.
+\brokenpenalty=10000              % No broken words across columns/pages.
+\widowpenalty=9999                % Almost no widows at bottom of page.
+\clubpenalty=9999                 % Almost no orphans at top of page.
+\interfootnotelinepenalty=9999    % Almost never break footnotes.
+
+\newcommand{\fref}[1]{شکل~\ref{#1}}
+\newcommand{\tref}[1]{جدول~\ref{#1}}
+\newcommand{\eref}[1]{معادله~\ref{#1}}
+\newcommand{\sref}[1]{بخش~\ref{#1}}
+
+
+
+
+\begin{document}
+	\input{cover}
+	\input{abstract}
+	\clearpage
+	\pagenumbering{alph}
+	\pagenumbering{arabic}
+%\thispagestyle{empty}
+	\section{بخش ۱}
+	\input{./Sections/Section1}
+	\section{بخش 2}
+	\input{./Sections/Section2}
+%	\section{بخش 3}
+%	\input{./Sections/Section3}
+%	\section{بخش 4}
+%	\input{./Sections/Section4}
+%	\section{بخش 5}
+%	\input{./Sections/Section5}
+%	\section{بخش 6}
+%	\input{./Sections/Section6}
+%	\section{بخش 7}
+%	\input{./Sections/Section7}
+	\clearpage
+	\bibliographystyle{unsrt-fa}
+	\bibliography{references}
+\end{document}
